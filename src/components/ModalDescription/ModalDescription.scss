@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+.modal-description {
+    height: 200px;
+    width: 100%;
+
+    textarea {
+        background-color: $light-grey;
+    }
+
+    .icon {
+        top: 16px;
+    }
+}
+
+.icon {
+    position: absolute;
+    left: 15px;
+    height: 16px;
+}

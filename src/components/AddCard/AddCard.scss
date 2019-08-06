@@ -1,0 +1,29 @@
+@import '../../styles/variables';
+
+.add-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 5px 5px 5px;
+    border-radius: 5px;
+    height: 100px;
+    box-shadow: 0px 0px 3px #494949b7;
+    color: #637188;
+    font-weight: 500;
+}
+
+.card-p {
+    margin-left: 10px;
+}
+
+textarea {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 2px #494949a4;
+    height: 45px;
+    margin: 5px;
+    padding: 10px;
+    &:focus {
+      outline: none;
+    }
+}

@@ -1,0 +1,23 @@
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Button.scss';
+
+export const BUTTON_TYPES = {
+    SQUARE: 'square-button',
+    LARGER: 'larger-button',
+    GREEN: 'green-button',
+    MODAL: 'modal-button'
+}
+
+const Button = ({ classType, text, icon }) => (
+    <div className={classType}>
+        <FontAwesomeIcon
+            icon={icon}
+            className= 'awesome-icon'
+            style={{ display: icon ? 'inline-block' : 'block' }}>
+        </FontAwesomeIcon>
+        {text}
+    </div>
+)
+
+export default Button;

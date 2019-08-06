@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.nav-input {
+  background: #818181;
+  border-radius: 5px;
+  width: 160px;
+  height: 28px;
+  margin: 5px 2.5px;
+  cursor: pointer;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.svg-inline--fa.fa-search.fa-w-16 {
+  color: $white;
+  position: absolute;
+  top: 12px;
+  left: 260px;
+}
