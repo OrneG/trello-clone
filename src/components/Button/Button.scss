@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #818181;
+    background: $grey-fade;
     border-radius: 5px;
     width: 30px;
     height: 30px;
@@ -12,7 +12,7 @@
     color: $white;
 
     i {
-        color: white;
+        color:$white;
     }
 }
 
@@ -20,9 +20,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color:$white;
     font-weight: 700;
-    background: #818181;
+    background: $grey-fade;
     border-radius: 5px;
     width: 85px;
     height: 30px;
@@ -34,8 +34,8 @@
 }
 
 .green-button {
-    margin: 5px;
-    color: white;
+    margin: 5px 5px 5px 0;
+    color: $white;
     text-align: center;
     font-size: 14px;
     font-weight: 600;
@@ -44,7 +44,11 @@
     height: 20px;;
     width: 80px;
     background-color:#5aac44;
-    padding: 5px
+    padding: 5px;
+
+    &:hover {
+        background-color: #4c863c;
+    }
 }
 
 .modal-button {
@@ -70,4 +74,50 @@
     &:hover {
         background-color: #cfcfcf;
     }
+}
+
+.transparent-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $grey;
+    font-weight: 400;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    margin: 5px;
+
+    .awesome-icon {
+        margin-right: 5px;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.068);
+    }
+}
+
+.column-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $light-grey;
+    background-color: rgba(0, 0, 0, 0.102);
+    font-weight: 400;
+    border-radius: 5px;
+    width: 250px;
+    height: 45px;
+    margin: 5px;
+    padding-left: 10px;
+
+    .awesome-icon {
+        margin: 0 5px;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.315);
+    }
+}
+
+.square-button, .larger-button, .green-button, .modal-button, .transparent-button, .column-button {
+    cursor: pointer;
 }

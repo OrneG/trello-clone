@@ -6,7 +6,9 @@ export const BUTTON_TYPES = {
     SQUARE: 'square-button',
     LARGER: 'larger-button',
     GREEN: 'green-button',
-    MODAL: 'modal-button'
+    MODAL: 'modal-button',
+    TRANSPARENT: 'transparent-button',
+    COLUMN: 'column-button'
 }
 
 const Button = ({ classType, text, icon }) => (
