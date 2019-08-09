@@ -5,21 +5,28 @@ import './AddColumn.scss';
 
 class AddColumn extends Component {
     state = {
-        visible: false
+        visible: false,
     }
     toggle = () => {
         this.setState({ visible: !this.state.visible })
     }
     render() {
+        const { onChange, onClick, value } = this.props;
         return (
             <>
                 <div className='add-column'
                     style={{
                         display: this.state.visible ? 'block' : 'none'
                     }}>
-                    <input className='input' type='text' placeholder='Enter list title...'></input>
+                    <input className='input'
+                        type='text'
+                        placeholder='Ingrese el título de la lista...'
+                        onChange={onChange}
+                        value={value}></input>
                     <div className='add-column-buttons'>
-                        <Button classType={BUTTON_TYPES.GREEN} text='Add card'></Button>
+                        <div onClick={onClick}>
+                            <Button classType={BUTTON_TYPES.GREEN} text='Agregar'></Button>
+                        </div>
                         <div onClick={this.toggle}>
                             <Button classType={BUTTON_TYPES.SQUARE} icon={faTimes}></Button>
                         </div>

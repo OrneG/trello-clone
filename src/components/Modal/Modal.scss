@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .modal {
-    visibility: hidden;
+    overflow: auto;
     display: flex;
     justify-content: space-between;
     position: fixed;

@@ -13,12 +13,12 @@ const columns = [
                     {
                         id: uuid(),
                         name: 'Funcional',
-                        color: 'orangered'
+                        color: '#ff8718'
                     },
                     {
                         id: uuid(),
                         name: 'Maquetado',
-                        color: 'darkgreen'
+                        color: '#03882c'
                     },
                     {
                         id: uuid(),
@@ -38,39 +38,56 @@ const columns = [
                         color: '#0079bf'
                     }
                 ]
-            }
-        ]
-    },
-    {
-        id: uuid(),
-        title: 'Procesando',
-        cards: [
-            {
-                id: uuid(),
-                title: 'Entender React',
-                text: 'asdasd',
-                tags: [
-                    {
-                        id: uuid(),
-                        name: 'Desarrollo',
-                        color: '#0079bf'
-                    }
-                ]
             },
             {
                 id: uuid(),
-                title: 'Tomarlo con calma',
+                title: 'Mejorar el aspecto del trello',
                 text: 'asdasdasdasd',
                 tags: [
                     {
                         id: uuid(),
-                        name: 'Bugs',
-                        color: 'red'
+                        name: 'Maquetado',
+                        color: '#03882c'
+                    },
+                    {
+                        id: uuid(),
+                        name: 'Diseño',
+                        color: '#dfc534'
                     }
                 ]
             }
         ]
     },
+    // {
+    //     id: uuid(),
+    //     title: 'Procesando',
+    //     cards: [
+    //         {
+    //             id: uuid(),
+    //             title: 'Entender React',
+    //             text: 'asdasd',
+    //             tags: [
+    //                 {
+    //                     id: uuid(),
+    //                     name: 'Desarrollo',
+    //                     color: '#0079bf'
+    //                 }
+    //             ]
+    //         },
+    //         {
+    //             id: uuid(),
+    //             title: 'Tomarlo con calma',
+    //             text: 'asdasdasdasd',
+    //             tags: [
+    //                 {
+    //                     id: uuid(),
+    //                     name: 'Bugs',
+    //                     color: '#e53935'
+    //                 }
+    //             ]
+    //         }
+    //     ]
+    // },
     {
         id: uuid(),
         title: 'Listos',
@@ -83,12 +100,12 @@ const columns = [
                     {
                         id: uuid(),
                         name: 'Funcional',
-                        color: 'orangered'
+                        color: '#ff8718'
                     },
                     {
                         id: uuid(),
                         name: 'Maquetado',
-                        color: 'darkgreen'
+                        color: '#03882c'
                     }
                 ]
             },
@@ -100,12 +117,12 @@ const columns = [
                     {
                         id: uuid(),
                         name: 'Funcional',
-                        color: 'orangered'
+                        color: '#ff8718'
                     },
                     {
                         id: uuid(),
                         name: 'Maquetado',
-                        color: 'darkgreen'
+                        color: '#03882c'
                     },
                     {
                         id: uuid(),

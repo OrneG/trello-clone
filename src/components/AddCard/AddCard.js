@@ -11,6 +11,7 @@ class AddCard extends Component {
         this.setState({ visible: !this.state.visible })
     }
     render() {
+        const { onChange, onClick, value } = this.props;
         return (
             <div className='add-card'>
                 <div className='add-card-form'
@@ -18,9 +19,14 @@ class AddCard extends Component {
                         display: this.state.visible ? 'block' : 'none'
                     }}
                 >
-                    <textarea placeholder='Enter a title for this card...'></textarea>
+                    <textarea placeholder='Ingrese un título para esta tarjeta...'
+                        onChange={onChange}
+                        value={value}>
+                    </textarea>
                     <div className='add-card-buttons'>
-                        <Button classType={BUTTON_TYPES.GREEN} text='Add card'></Button>
+                        <div onClick={onClick}>
+                            <Button classType={BUTTON_TYPES.GREEN} text='Add card'></Button>
+                        </div>
                         <div onClick={this.toggle}>
                             <Button classType={BUTTON_TYPES.SQUARE} icon={faTimes}></Button>
                         </div>

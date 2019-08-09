@@ -4,12 +4,12 @@ const tags = [
     {
         id: uuid(),
         name: 'Funcional',
-        color: 'orangered'
+        color: '#ff8718'
     },
     {
         id: uuid(),
         name: 'Maquetado',
-        color: 'darkgreen'
+        color: '#03882c'
     },
     {
         id: uuid(),
@@ -24,7 +24,7 @@ const tags = [
     {
         id: uuid(),
         name: 'Bugs',
-        color: 'red'
+        color: '#e53935'
     }
 ]
 

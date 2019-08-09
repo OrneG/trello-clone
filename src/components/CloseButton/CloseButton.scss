@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+.close-button {
+    color: $grey;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 99;
+}
