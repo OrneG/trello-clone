@@ -5,10 +5,11 @@ import './Modal.scss';
 
 class Modal extends Component {
   render() {
-    const { onClose, onChange, value } = this.props
+    const { onClose, onClick, onAddDescription, description, comments } = this.props
     return (
       <div className='modal'>
-        <ModalContainer onChange={onChange} value={value}></ModalContainer>
+        <ModalContainer comments={comments} onClick={onClick}
+        onAddDescription={onAddDescription} description={description}></ModalContainer>
         <ModalButtonContainer onClose={onClose}></ModalButtonContainer>
       </div>
     )

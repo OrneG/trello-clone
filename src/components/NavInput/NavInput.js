@@ -8,14 +8,15 @@ class NavInput extends Component {
         large: false
     }
     enlargeInput = () => {
-        this.setState({ large: !this.state.large })
+        this.setState({ large: true })
     }
     render() {
+        const { onFocus } = this.props;
         return (
             <>
-            <input type='text' className='nav-input'
+            <input type='text' className='nav-input' onFocus={this.enlargeInput}
             // style={{
-            //     width: 300
+            //     width: 300,
             //     backgrondColor: white
             // }}
             >

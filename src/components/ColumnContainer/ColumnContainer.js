@@ -15,18 +15,18 @@ class ColumnContainer extends Component {
     toggle = () => {
         this.setState({ visible: !this.state.visible })
     }
-    ingresarNombreColumna = evento => {
+    addColumnName = evento => {
         this.setState({ columnName: evento.target.value })
     }
-    agregarColumna = () => {
-        const nuevaColumna = {
+    addNewColumn = () => {
+        const newColumn = {
             id: uuid(),
             title: this.state.columnName,
             cards: []
         }
-        const nuevoArray = this.state.columns.slice();
-        nuevoArray.push(nuevaColumna)
-        this.setState({ columnName: '', columns: nuevoArray })
+        const columns = this.state.columns.slice();
+        columns.push(newColumn)
+        this.setState({ columnName: '', columns: columns })
     }
     render() {
         return (
@@ -34,9 +34,9 @@ class ColumnContainer extends Component {
                 {
                     this.state.columns.map(column => <Column key={column.id} title={column.title} cards={column.cards} />)
                 }
-                <AddColumn onChange={this.ingresarNombreColumna}
+                <AddColumn onChange={this.addColumnName}
                     value={this.state.columnName}
-                    onClick={this.agregarColumna}
+                    onClick={this.addNewColumn}
                 ></AddColumn>
             </div>
         )

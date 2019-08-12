@@ -5,11 +5,11 @@ import './ModalContainer.scss';
 
 class ModalContainer extends Component {
   render() {
-    const { onChange, value } = this.props
+    const { onClick, onAddDescription, description, comments } = this.props
     return (
       <div className='modal-container'>
-      <ModalDescription onChange={onChange} value={value}></ModalDescription>
-      <ModalComents></ModalComents>
+      <ModalDescription onAddDescription={onAddDescription} description={description}></ModalDescription>
+      <ModalComents onClick={onClick} comments={comments}></ModalComents>
   </div> 
     )
   }

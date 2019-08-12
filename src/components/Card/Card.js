@@ -8,21 +8,23 @@ class Card extends Component {
     state = {
         modalVisible: false,
         description: '',
+        comment: '',
+        comments: []
     }
     toggleModal = () => {
         this.setState({ modalVisible: !this.state.modalVisible })
     }
-    ingresarDescripcionTarjeta = evento => {
-        this.setState({ description: evento.target.value })
+    addCardDescription = event => {
+        this.setState({ description: event.target.value })
     }
-    agregarDescripcion = () => {
-        const nuevaDescripcion = {
+    addComment = () => {
+        const newComment = {
             id: uuid(),
-            title: this.state.description,
+            text: this.state.comment,
         }
-        const nuevoArray = this.state.cards.slice();
-        nuevoArray.push(nuevaDescripcion)
-        this.setState({ description: '' })
+        const comments = this.state.comments.slice();
+        comments.push(newComment)
+        this.setState({ comment: '', comments: comments})
     }
     render() {
         const { tags, title, text } = this.props
@@ -45,8 +47,10 @@ class Card extends Component {
                 {
                     this.state.modalVisible &&
                     <Modal onClose= {this.toggleModal}
-                    onChange={this.ingresarDescripcionTarjeta}
-                    value={this.state.description}/>
+                    onAddDescription={this.addCardDescription}
+                    description={this.state.description}
+                    onClick={this.addComment}
+                    comments={this.state.comments}/>
                 }
             </>
         )
