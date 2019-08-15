@@ -25,7 +25,7 @@ class Column extends Component {
         }
         const nuevoArray = this.state.cards.slice();
         nuevoArray.push(nuevaTarjeta)
-        this.setState({ cardName: '',cards: nuevoArray })
+        this.setState({ cardName: '', cards: nuevoArray })
     }
     render() {
         const { title } = this.props

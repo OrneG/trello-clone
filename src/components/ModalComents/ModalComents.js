@@ -11,13 +11,16 @@ class ModalComents extends Component {
         return (
             <ModalContextConsumer>
                 {
-                    ({onClick, comments, comment}) => (
+                    ({addComment, comments, comment, addNewComment}) => (
                         <div className='modal-coments'>
                         <h2 className='h2'>
                             <FontAwesomeIcon className='icon' icon={faComment}></FontAwesomeIcon>Add Comment
                     </h2>
-                        <textarea className='textarea' placeholder='Write a comment...' comment={comment}></textarea>
-                        <div onClick={onClick}>
+                        <textarea className='textarea'
+                        placeholder='Write a comment...'
+                        comment={comment}
+                        onChange={addNewComment}></textarea>
+                        <div onClick={addComment}>
                             <Button classType={BUTTON_TYPES.GREEN} text='Guardar'></Button>
                         </div>
                         {

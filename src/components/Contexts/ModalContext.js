@@ -8,16 +8,17 @@ class ModalContextProvider extends Component {
         modalVisible: false,
         description: '',
         comment: '',
-        comments: []
+        comments: [],
+        cards: []
     }
     toggleModal = () => {
         this.setState({ modalVisible: !this.state.modalVisible })
     }
-    addCardDescription = event => {
+    addNewDescription = event => {
         this.setState({ description: event.target.value })
     }
     addNewComment = event => {
-        this.setState({ comment:event.target.value })
+        this.setState({ comment: event.target.value })
     }
     addComment = () => {
         const newComment = {
@@ -27,6 +28,15 @@ class ModalContextProvider extends Component {
         const comments = this.state.comments.slice();
         comments.push(newComment)
         this.setState({ comment: '', comments: comments})
+    }
+    addCardDescription = () => {
+        const newDescription = {
+            id: uuid(),
+            text: this.state.description,
+        }
+        const cards = this.state.cards.slice();
+        cards.push(newDescription)
+        this.setState({ description: '', cards: cards})
     }
     render() {
         return (
@@ -38,8 +48,9 @@ class ModalContextProvider extends Component {
                 comments: this.state.comments,
                 toggleModal: this.toggleModal,
                 addCardDescription: this.addCardDescription,
+                addNewDescription: this.addNewDescription,
                 addNewComment: this.addNewComment,
-                onClick: this.addComment
+                addComment: this.addComment
             }}>
                 {this.props.children}
             </ModalContext.Provider>

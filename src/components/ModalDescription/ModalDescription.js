@@ -10,7 +10,7 @@ class ModalDescription extends Component {
         return (
             <ModalContextConsumer>
                 {
-                    ({addCardDescription, description}) => (
+                    ({ addNewDescription, addCardDescription, description }) => (
                         <div className='modal-description'>
                         <h2 className='h2'>
                             <FontAwesomeIcon className='icon'
@@ -18,7 +18,8 @@ class ModalDescription extends Component {
                     </h2>
                         <textarea className='textarea'
                             placeholder='Add a more detailed description...'
-                            description={description}>
+                            description={description}
+                            onChange={addNewDescription}>
                         </textarea>
                         <div onClick={addCardDescription}>
                             <Button classType={BUTTON_TYPES.GREEN} text='Guardar'></Button>
