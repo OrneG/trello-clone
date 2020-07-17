@@ -1,51 +1,18 @@
-import React, { Component } from 'react';
-import Card from 'components/Card/Card';
-import uuid from 'uuid/v4';
-import AddCard from 'components/AddCard/AddCard';
-import './Column.scss';
-import 'components/AddCard/AddCard.scss'
+import React from 'react'
+import AddInputControl, {INPUT_ELEMENTS} from 'components/AddInputControl/AddInputControl'
+import CardList from 'components/Lists/CardList/CardList';
+import './Column.scss'
 
-class Column extends Component {
-    state = {
-        visible: false,
-        cardName: '',
-        cards: []
-    }
-    toggle = () => {
-        this.setState({ visible: !this.state.visible })
-    }
-    ingresarNombreTarjeta = evento => {
-        this.setState({ cardName: evento.target.value })
-    }
-    agregarTarjeta = () => {
-        const nuevaTarjeta = {
-            id: uuid(),
-            title: this.state.cardName,
-            tags: []
-        }
-        const nuevoArray = this.state.cards.slice();
-        nuevoArray.push(nuevaTarjeta)
-        this.setState({ cardName: '', cards: nuevoArray })
-    }
-    render() {
-        const { title } = this.props
-        return (
-            <div className='column'>
-                <p className='column-p'>{title}</p>
-                {
-                    this.state.cards.map(card => <Card
-                        key={card.id}
-                        title={card.title}
-                        text={card.text}
-                        tags={card.tags} />)
-                }
-                <AddCard onChange={this.ingresarNombreTarjeta}
-                    value={this.state.cardName}
-                    onClick={this.agregarTarjeta}>
-                </AddCard>
-            </div>
-        )
-    }
-}
+const Column = ({title, cards}) => (
+    <div className='column'>
+        <p className='title'>{title}</p>
+        <CardList cards={cards} />
+        <AddInputControl 
+            inputElement={INPUT_ELEMENTS.TEXTAREA}
+            placeholder='Introduzca un título para esta tarjeta'
+            buttonText='Añadir tarjeta'
+        />   
+    </div>
+)
 
-export default Column;
+export default Column

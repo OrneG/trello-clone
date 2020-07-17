@@ -1,12 +1,16 @@
 import React from 'react';
-import MainContainer from 'components/MainContainer/MainContainer';
+import Dashboard from 'components/Dashboard/Dashboard'
+import Panel from 'components/Panel/Panel'
+import Navbar from 'components/Navbar/Navbar'
+import CardModal from 'components/Modals/CardModal/CardModal'
 
 const App = () => (
   <>
-  <MainContainer></MainContainer>
-  </>
+    <Navbar />
+    <Dashboard title='Mi tablero' />
+    <Panel />
+    {/* <CardModal /> */}
+  </>    
 )
 
-export default App;
-
-// menu lateral, etiquetas
+export default App

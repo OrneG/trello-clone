@@ -1,5 +1,5 @@
-import React from 'react';
-import './Tag.scss';
+import React from 'react'
+import './Tag.scss'
 
 export const TAG_TYPES = {
     SMALL: 'tag-small',
@@ -7,12 +7,14 @@ export const TAG_TYPES = {
 }
 
 const Tag = ({type, color, name}) => (
-    <div className={type}
-        style={
-            { backgroundColor: color }
-        }>
-        {name}
+    <div
+        className={type} 
+        style={{backgroundColor: color}}
+    >
+         {name}
     </div>
 )
 
-export default Tag;
+export default Tag
+
+

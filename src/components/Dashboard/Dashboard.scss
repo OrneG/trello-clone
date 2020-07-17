@@ -1,0 +1,28 @@
+.dashboard {
+    width: 100%;
+    height: calc(100% - 40px);
+    padding: 0 5px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40px;
+
+    & > .title {
+        font-size: 20px;
+        color: white;
+        margin-left: 15px;
+    }
+
+    .columns {
+        display: flex;
+        align-items: flex-start;    
+
+        & > .add-input-control {
+            min-width: 270px;
+            background-color: rgb(235, 236, 240);
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0 5px;
+        }
+    }
+
+}

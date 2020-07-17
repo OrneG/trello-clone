@@ -3,11 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import './CloseButton.scss'
 
-const CloseButton = ({onClose}) => (
-    <FontAwesomeIcon
-    icon={faTimes}
-    className='close-button'
-    onClose={onClose}/>
+const CloseButton = () => (
+    <FontAwesomeIcon icon={faTimes} className='close-button' />
 )
 
 export default CloseButton;

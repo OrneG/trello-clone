@@ -1,7 +1,7 @@
-@import '../../styles/variables';
+@import 'styles/abstract/colors';
 
 .close-button {
-    color: $grey;
+    color: $primary-font-color;
     position: absolute;
     top: 15px;
     right: 15px;
